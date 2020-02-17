@@ -1,0 +1,25 @@
+{
+  "name": "hash20guac",
+  "version": "1.0.0",
+  "description": "Holy Guacamole HashCode 20 Entry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esummers1/hashcode-2020"
+  },
+  "author": "HolyGuacs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esummers1/hashcode-2020/issues"
+  },
+  "homepage": "https://github.com/esummers1/hashcode-2020#readme",
+  "devDependencies": {
+    "@types/node": "^11.9.5"
+  },
+  "dependencies": {
+    "typescript": "^3.7.5"
+  }
+}

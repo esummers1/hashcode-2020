@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules
+
+# Outputs
+output/*
+/output
+
+# Built source
+index.js
