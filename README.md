@@ -10,7 +10,7 @@ mkdir output
 ## :package: Build
 
 ```bash
-tsc index
+npm run build
 ```
 
 ## :running_man: Run

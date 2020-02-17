@@ -4,6 +4,7 @@
   "description": "Holy Guacamole HashCode 20 Entry",
   "main": "index.js",
   "scripts": {
+    "build": "tsc index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
