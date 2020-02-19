@@ -1,5 +1,12 @@
-import InputModel from './src/models/input.model';
+// Helpers
 import { readFile } from './src/reader';
+
+// Models
+import InputModel from './src/models/input.model';
+import SolutionModel from './src/models/solution.model';
+
+// Approaches
+import NaiveApproach from './src/approaches/naive-approach';
 
 const files = [
   './inputs/a_example.in',
@@ -10,7 +17,7 @@ const files = [
 ];
 
 const approaches = [
-
+  new NaiveApproach()
 ];
 
 // Read each file
