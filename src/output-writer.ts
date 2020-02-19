@@ -4,12 +4,12 @@ import SolutionModel from './models/solution.model';
 export const writeFile = (solution: SolutionModel, filename: string): void => {
 
   console.log('Writing solution for ', filename);
-  let wstream = fs.createWriteStream(`output/${filename}.output`);
+  let wstream = fs.createWriteStream(`${filename}.output`);
 
-  // Write number of slides
+  // Write number of slices
   wstream.write(`${solution.ids.length} \n`);
 
-  // Write each slide
+  // Write each slice
   solution.ids.forEach((id: number) => {
       wstream.write(`${id} `);
   });

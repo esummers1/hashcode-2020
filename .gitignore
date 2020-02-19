@@ -2,8 +2,7 @@
 node_modules
 
 # Outputs
-output/*
-/output
+outputs/*
 
 # Built source
-index.js
+**.js
