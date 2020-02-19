@@ -16,5 +16,5 @@ npm run build
 ## :running_man: Run
 
 ```bash
-node index
+npm start
 ```
