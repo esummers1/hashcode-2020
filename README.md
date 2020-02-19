@@ -4,7 +4,7 @@
 
 ```bash
 npm install
-mkdir output
+mkdir outputs
 ```
 
 ## :package: Build
