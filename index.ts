@@ -7,7 +7,6 @@ import InputModel from './src/models/input.model';
 import SolutionModel from './src/models/solution.model';
 
 // Approaches
-import MostBooksApproach from './src/approaches/most-books';
 import MostBooksPerDayApproach from './src/approaches/most-books-per-day';
 
 const filenames = [
