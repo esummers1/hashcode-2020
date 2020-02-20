@@ -66,6 +66,8 @@ export default class Supergood2 extends Approach {
           remainingLibraries = remainingLibraries.filter(lib => lib !== nextLibrary);
         }
       }
+
+      i++;
     }
 
     return solution;
