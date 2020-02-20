@@ -18,6 +18,7 @@ const filenames = [
   "f_libraries_of_the_world.txt"
 ];
 
+// Register approaches for processing here
 const approaches = [
   new Supergood2("supergood-mod-hundred")
 ];

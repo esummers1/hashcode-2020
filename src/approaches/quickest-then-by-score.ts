@@ -4,7 +4,7 @@ import SolutionModel from "../models/solution.model";
 import LibraryModel from '../models/library.model';
 import BookModel from "../models/book.model";
 
-export default class QuickestThenByScore extends Approach {
+export default class QuickestThenByScoreApproach extends Approach {
 
   public apply(input: InputModel): SolutionModel {
     console.log("Applying approach: " + this.name);
@@ -50,7 +50,7 @@ export default class QuickestThenByScore extends Approach {
 
   getScore = (library: LibraryModel, numDays: number): number => {
     return (library.booksPerDay * this.getAvgBookScore(library))
-        * (numDays - library.signupLength);
+      * (numDays - library.signupLength);
   }
 
   getAvgBookScore = (library: LibraryModel): number => {
