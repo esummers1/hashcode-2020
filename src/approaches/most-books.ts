@@ -33,8 +33,7 @@ export default class MostBooksApproach extends Approach {
         // Remember which books we have read!
         library.books.forEach(book => booksRead.add(book));
       }
-
-    })
+    });
 
     return solution;
   }

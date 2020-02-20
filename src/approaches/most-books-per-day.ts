@@ -17,12 +17,22 @@ export default class MostBooksPerDayApproach extends Approach {
 
     const sortedLibraries: LibraryModel[] = input.libraries.sort(
         (a, b) => b.booksPerDay - a.booksPerDay);
+    const booksRead = new Set<BookModel>();
 
-    // Output all libraries, starting with the one with the most books
+    // Output all libraries, starting with the one with the most books and
+    // ignoring books already read.
     sortedLibraries.forEach(library => {
-      solution.libraries.push(library);
-      solution.books.set(library.id, library.books);
-    })
+      const newBooks = library.books.filter(book => {
+        return !booksRead.has(book);
+      });
+
+      if(newBooks.length > 0){
+        solution.libraries.push(library);
+        solution.books.set(library.id, newBooks);
+        // Remember which books we have read!
+        library.books.forEach(book => booksRead.add(book));
+      }
+    });
 
     return solution;
   }
