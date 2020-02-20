@@ -25,13 +25,13 @@ const approaches = [
 filenames.forEach(filename => {
 
   const getScore = (solution: SolutionModel, input: InputModel) => {
-    return 0;
+    return 1;
   }
 
   const input: InputModel = readFile(`./inputs/${filename}`);
 
   let bestSolution: SolutionModel = {};
-  let bestScore: number;
+  let bestScore = 0;
 
   // Apply each approach
   approaches.forEach(approach => {

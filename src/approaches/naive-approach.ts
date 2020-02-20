@@ -5,6 +5,8 @@ import SolutionModel from '../models/solution.model';
 export default class NaiveApproach extends Approach {
   public apply(input: InputModel): SolutionModel {
 
+    console.log('Applying approach: ' + this.name);
+
     const descendingPizzaOptions = input.pizzaOptions.sort((a, b) => b.slices - a.slices);
     let currentSlices = 0;
 
