@@ -24,7 +24,7 @@ export const readFile = (fileName: string): InputModel => {
 
   // Get our libraries
   const libraries: Library[] = [];
-  for (let i = 2; i < data.length - 1; i += 2) {
+  for (let i = 2; i < data.length - 2; i += 2) {
 
     // Read library line
     const libraryLine = data[i].split(" ").map(i => Number(i));
