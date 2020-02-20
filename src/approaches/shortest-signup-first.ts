@@ -27,8 +27,13 @@ export default class ShortestSignupFirstApproach extends Approach {
       });
 
       if (newBooks.length > 0) {
+
         solution.libraries.push(lib);
-        solution.books.set(lib.id, newBooks);
+
+        // Sort books - highest score first
+        const sortedBooks = newBooks.sort((a, b) => b.score - a.score);
+        solution.books.set(lib.id, sortedBooks);
+
         // Remember which books we have read!
         lib.books.forEach(book => booksRead.add(book));
       }
