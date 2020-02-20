@@ -7,7 +7,6 @@ import InputModel from './src/models/input.model';
 import SolutionModel from './src/models/solution.model';
 
 // Approaches
-import NaiveApproach from './src/approaches/naive-approach';
 
 const filenames = [
   'a_example.txt',
@@ -19,7 +18,6 @@ const filenames = [
 ];
 
 const approaches = [
-  new NaiveApproach('Naive Approach')
 ];
 
 // Read each file
