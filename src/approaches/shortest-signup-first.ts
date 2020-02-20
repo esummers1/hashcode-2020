@@ -30,15 +30,18 @@ export default class ShortestSignupFirstApproach extends Approach {
       });
 
       if (newBooks.length > 0) {
-        elapsed += lib.signupLength;
+        var numOfBooksToTake =
+          (input.days - elapsed - lib.signupLength) * lib.booksPerDay;
 
-        var numOfBooksToTake = (input.days - elapsed) / lib.booksPerDay;
+        //(time to do - spent time - time to setup) * books per day
 
         // Sort books - highest score first
         const sortedBooks = newBooks.sort((a, b) => b.score - a.score);
         var takenBooks = sortedBooks.slice(0, numOfBooksToTake);
 
         if (takenBooks.length > 0) {
+          elapsed += lib.signupLength;
+
           solution.libraries.push(lib);
           solution.books.set(lib.id, takenBooks);
           // Remember which books we have read!
