@@ -1,6 +1,7 @@
-import PizzaModel from './pizza.model';
+import Library from './library.model';
+import Book from './book.model';
 
 export default interface InputModel {
-  targetSlices: number;
-  pizzaOptions: PizzaModel[];
+  days?: number;
+  libraries?: Library[];
 }
