@@ -42,6 +42,5 @@ export const readFile = (fileName: string): InputModel => {
   }
 
   input.libraries = libraries;
-  console.log(JSON.stringify(input));
   return input;
 }
