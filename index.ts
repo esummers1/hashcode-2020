@@ -7,7 +7,7 @@ import InputModel from './src/models/input.model';
 import SolutionModel from './src/models/solution.model';
 
 // Approaches
-import MostBooksPerDayApproach from './src/approaches/most-books-per-day';
+import MostBooksApproach from './src/approaches/most-books';
 
 const filenames = [
   'a_example.txt',
@@ -19,7 +19,7 @@ const filenames = [
 ];
 
 const approaches = [
-  new MostBooksPerDayApproach('most-books-per-day')
+  new MostBooksApproach('most-books')
 ];
 
 // Read each file
