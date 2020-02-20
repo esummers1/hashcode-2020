@@ -2,7 +2,6 @@ import Approach from "./approach";
 import InputModel from "../models/input.model";
 import SolutionModel from "../models/solution.model";
 import BookModel from "../models/book.model";
-import { removeExcessiveSignupLibraries } from "../utils";
 
 export default class ShortestSignupFirstApproach extends Approach {
   public apply(input: InputModel): SolutionModel {

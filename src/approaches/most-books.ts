@@ -23,8 +23,6 @@ export default class MostBooksApproach extends Approach {
     // Output all libraries, starting with the one with the most books
     // and ignoring books already read
     sortedLibraries.forEach(library => {
-
-      
       const newBooks = library.books.filter(book => {
         return !booksRead.has(book);
       });
@@ -35,8 +33,7 @@ export default class MostBooksApproach extends Approach {
         // Remember which books we have read!
         library.books.forEach(book => booksRead.add(book));
       }
-
-    })
+    });
 
     return solution;
   }
