@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import SolutionModel from './models/solution.model';
 import LibraryModel from './models/library.model';
+import BookModel from './models/book.model';
 
 export const writeFile = (solution: SolutionModel, filename: string): void => {
   console.log('Writing solution for ', filename);
@@ -16,11 +17,11 @@ export const writeFile = (solution: SolutionModel, filename: string): void => {
     wstream.write(`${library.id} `);
 
     // Write number of books scanned
-    wstream.write(`${solution.bookIds.get(library.id).length}\n`);
+    wstream.write(`${solution.books.get(library.id).length}\n`);
 
     // Write each book ID
-    solution.bookIds.get(library.id).forEach((bookId: number) => {
-      wstream.write(`${bookId} `);
+    solution.books.get(library.id).forEach((book: BookModel) => {
+      wstream.write(`${book.id} `);
     });
 
     wstream.write(`\n`);
