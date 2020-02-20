@@ -4,7 +4,7 @@ import SolutionModel from '../models/solution.model';
 import LibraryModel from '../models/library.model';
 import BookModel from '../models/book.model';
 
-export default class MostBooksApproach extends Approach {
+export default class MaxScoreApproach extends Approach {
   public apply(input: InputModel): SolutionModel {
 
     console.log('Applying approach: ' + this.name);
@@ -16,7 +16,7 @@ export default class MostBooksApproach extends Approach {
     };
 
     const sortedLibraries: LibraryModel[] = input.libraries.sort(
-        (a, b) => b.books.length - a.books.length);
+        (a, b) => this.getScore(b, input.days) - this.getScore(a, input.days));
 
     const booksRead = new Set<BookModel>();
 
@@ -38,4 +38,16 @@ export default class MostBooksApproach extends Approach {
 
     return solution;
   }
+
+  getScore = (library: LibraryModel, numDays: number): number => {
+    return (library.booksPerDay * this.getAvgBookScore(library))
+        * (numDays - library.signupLength);
+  }
+
+  getAvgBookScore = (library: LibraryModel): number => {
+    return library.books.reduce((acc, book) => {
+      return acc + book.score;
+    }, 0) / library.books.length;
+  }
+
 }
