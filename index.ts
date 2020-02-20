@@ -22,7 +22,7 @@ const filenames = [
 
 const approaches = [
   // new TestApproach('test'),
-  new ShortestSignupFirstApproach('Shortest Signup First')
+  new ShortestSignupFirstApproach('Shortest Signup First'),
   new MostBooksApproach('most_books')
 ];
 
