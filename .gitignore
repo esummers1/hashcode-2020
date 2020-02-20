@@ -3,6 +3,7 @@ node_modules
 
 # Outputs
 **.output
+*.zip
 
 # Built source
 **.js
