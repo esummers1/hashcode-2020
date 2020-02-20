@@ -7,8 +7,7 @@ import InputModel from "./src/models/input.model";
 import SolutionModel from "./src/models/solution.model";
 
 // Approaches
-//import ShortestTimePerBook from "./src/approaches/shortest-time-per-book";
-import ShortestSignupFirstApproach from "./src/approaches/shortest-signup-first";
+import Supergood2 from './src/approaches/supergood-2';
 
 const filenames = [
   "a_example.txt",
@@ -20,7 +19,7 @@ const filenames = [
 ];
 
 const approaches = [
-  new ShortestSignupFirstApproach("shortest-signup-bookstaken")
+  new Supergood2("supergood-mod-hundred")
 ];
 
 // Read each file

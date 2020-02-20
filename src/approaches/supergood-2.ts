@@ -28,9 +28,9 @@ export default class Supergood2 extends Approach {
 
       // Sort by maximum yield
       const sortedLibraries: LibraryModel[] = remainingLibraries.sort((a, b) => {
-        // Every 3rd iteration, we pick the highest-scoring libary,
+        // Every 100th iteration, we pick the highest-scoring libary,
         // otherwise we pick the library with the shortest sign-up time
-        if (i % 3 == 0) {
+        if (i % 100 == 0) {
           return this.getScore(b, remainingDays) - this.getScore(a, remainingDays);
         } else {
           return a.signupLength - b.signupLength;
