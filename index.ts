@@ -10,11 +10,12 @@ import SolutionModel from './src/models/solution.model';
 import NaiveApproach from './src/approaches/naive-approach';
 
 const filenames = [
-  'a_example.in',
-  'b_small.in',
-  'c_medium.in',
-  'd_quite_big.in',
-  'e_also_big.in',
+  'a_example.txt',
+  'b_read_on.txt',
+  'c_incunabula.txt',
+  'd_tough_choices.txt',
+  'e_so_many_books.txt',
+  'f_libraries_of_the_world.txt'
 ];
 
 const approaches = [
