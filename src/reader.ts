@@ -33,9 +33,11 @@ const getLibraries = (lines: string[], books: Book[]): Library[] => {
       books: []
     }
 
-    // Read books line
-    const booksLine = lines[i + 1].split(" ").map(i => Number(i));
-    booksLine.forEach(id => library.books.push(books[id]));
+    // Read book list line
+    lines[i + 1]
+      .split(" ")
+      .map(i => Number(i))
+      .forEach(id => library.books.push(books[id]));
 
     libraries.push(library);
   }
